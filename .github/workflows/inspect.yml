@@ -1,0 +1,15 @@
+name: Second Workflow
+on: push
+jobs:
+  Second:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkut repo
+        uses: actions/checkout@main
+      - name: Print kernam details
+        run: |
+          uanme -a
+          ls -la
+      - name: No of files
+        run: find . -type f | wc -l
+
