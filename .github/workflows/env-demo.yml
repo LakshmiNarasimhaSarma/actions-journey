@@ -1,7 +1,7 @@
 name: Env-Demo
 on: push
 env:
-  APP_NAME : Journey
+  APP_NAME : journey
 jobs: 
  EnvDemo:
    runs-on: ubuntu-latest
