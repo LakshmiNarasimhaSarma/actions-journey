@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkut repo
-        uses: actions/checkout@main
-      - name: Print kernam details
+        uses: actions/checkout@v4
+      - name: Print kernal details
         run: |
-          uanme -a
+          uname -a
           ls -la
       - name: No of files
         run: find . -type f | wc -l
