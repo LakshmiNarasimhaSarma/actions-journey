@@ -1,0 +1,14 @@
+name: Cleanup
+on: push
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start Database
+        run: echo "Starting Database"
+      - name: Flaky check
+        run: exit 1
+      - name: Stopping Database
+        if: always()
+        run: echo " Stopping test Database "
+
