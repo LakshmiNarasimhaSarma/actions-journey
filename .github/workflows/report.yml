@@ -1,0 +1,16 @@
+name: Build Report
+on: push
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Crate report
+        run: |
+          echo " Build report" > report.txt
+          date >> report.txt
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-report
+          path: report.txt
+          retention-days: 5
