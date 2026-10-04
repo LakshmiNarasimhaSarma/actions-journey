@@ -1,6 +1,8 @@
 name: Three Stage Pipeline Job
 on: push
 jobs:
+  checks:
+    uses: ./.github/workflows/checks.yml
   build:
     runs-on: ubuntu-latest
     outputs:
