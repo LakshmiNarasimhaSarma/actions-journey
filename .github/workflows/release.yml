@@ -1,6 +1,12 @@
 name: Release Pipeline
 on: push
 jobs:
+  notify:
+    uses: ./.github/workflows/notify.yml
+    with:
+      environment: Production
+    secrets:
+      NOTIFY_TOKEN: ${{ secrets.NOTIFY_TOKEN }}
   lint:
     runs-on: ubuntu-latest
     steps:
